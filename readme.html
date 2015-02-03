@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>BMP Classes in Ruby</TITLE>
+<META NAME="Generator" CONTENT="TextPad 4.4">
+<META NAME="Author" CONTENT="Andrew Nisbet">
+<META NAME="Keywords" CONTENT="BMP, steganography, ruby">
+<style>
+body,a,p{font-family:arial,sans-serif;}
+h1{font-size: 20px;text-align: center}
+a{color:red;}
+</style>
+</HEAD>
+
+<BODY BGCOLOR="#000000" TEXT="#FFFFFF">
+<P>
+<H1><a href="http://www.ruby-lang.org/en/">Ruby</a> Implementation of BMP classes</H1>
+<p>
+Included in this directory are a set of classes for manipulating Microsoft's BMP file format.
+Microsoft's <a href="http://atlc.sourceforge.net/bmp.html">specification</a> outlines the 
+basics of what a BMP is and what it contains.
+<p>
+This set of classes (written in pure Ruby) was designed to open, manipulate (on a very low level),
+report on a BMP and hide data within a BMP. This last item is referred to as 
+<a href="http://www.jjtc.com/Steganography/">steganography</a>. The BMP classes, of course, can
+easily be extended to do useful work and because they are written in a Ruby which is an 
+interpreted language they are not very fast (compared to C) but they are concise, and easy to
+extend to other purposes.
+<p>
+The BMP classes were designed as an object lesson for learning Ruby and come with no guarantee.
+The classes are easy to implement and work on regular (non-icon), uncompressed BMPs. Compression
+will be handled at a later date.
+<P>
+Briefly, these classes allow you to hide data within a graphic. How this is done takes place 
+on a byte by byte level, but some interesting points about this technique are that the BMP
+looks like the original to all but the most rigorous examinations and the BMP with 
+embedded data is exactly the same size as the original. This implementation includes a trivial
+password system to 'protect' the data (a more robust implementation is left as an exercise to
+the reader).
+<P>
+   Copyright (C) 2013  Andrew Nisbet
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ MA 02110-1301, USA.
+
+ Author:  Andrew Nisbet
+</BODY>
+</HTML>
